@@ -1,0 +1,60 @@
+{
+    "name": "cybercog/laravel-optimus",
+    "description": "An Optimus bridge for Laravel. Id obfuscation based on Knuth's multiplicative hashing method.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "cybercog",
+        "cog",
+        "laravel",
+        "optimus",
+        "hashids",
+        "id",
+        "encrypt",
+        "decrypt",
+        "obfuscate"
+    ],
+    "authors": [
+        {
+            "name": "Anton Komarev",
+            "email": "a.komarev@cybercog.su",
+            "homepage": "http://ell.folio.su",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/cybercog/laravel-optimus",
+    "support": {
+        "email": "a.komarev@cybercog.su",
+        "issues": "https://github.com/cybercog/laravel-optimus/issues",
+        "wiki": "https://github.com/cybercog/laravel-optimus/wiki",
+        "source": "https://github.com/cybercog/laravel-optimus",
+        "docs": "https://github.com/cybercog/laravel-optimus/wiki"
+    },
+    "require": {
+        "graham-campbell/manager": "^2.5",
+        "illuminate/contracts": "~5.2.0|~5.3.0|~5.4.0",
+        "illuminate/support": "~5.2.0|~5.3.0|~5.4.0",
+        "jenssegers/optimus": "^0.2.2",
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^1.11",
+        "graham-campbell/testbench": "^3.3",
+        "mockery/mockery": "^0.9.5",
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cog\\Optimus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cog\\Optimus\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
