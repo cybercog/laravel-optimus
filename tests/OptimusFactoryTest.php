@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Cog\Optimus\Tests;
 
-use Jenssegers\Optimus\Optimus;
 use Cog\Optimus\OptimusFactory;
+use Jenssegers\Optimus\Optimus;
 
 /**
  * Class OptimusFactoryTest.
