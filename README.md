@@ -1,13 +1,15 @@
-# Laravel Optimus
+![cog-laravel-optimus-3](https://cloud.githubusercontent.com/assets/1849174/21738350/6c08b624-d494-11e6-9895-94e7d5f39010.png)
 
-[![Build Status](https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square)](https://travis-ci.org/cybercog/laravel-optimus)
-[![StyleCI](https://styleci.io/repos/77817858/shield)](https://styleci.io/repos/77817858)
-[![Releases](https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square)](https://github.com/cybercog/laravel-optimus/releases)
-[![License](https://img.shields.io/github/license/cybercog/laravel-optimus.svg?style=flat-square)](https://github.com/cybercog/laravel-optimus/blob/master/LICENSE)
+<p align="center">
+<a href="https://travis-ci.org/cybercog/laravel-optimus"><img src="https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://styleci.io/repos/77817858"><img src="https://styleci.io/repos/77817858/shield" alt="StyleCI"></a>
+<a href="https://github.com/cybercog/laravel-optimus/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square" alt="Releases"></a>
+<a href="https://github.com/cybercog/laravel-optimus/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/laravel-optimus.svg?style=flat-square" alt="License"></a>
+</p>
 
-Laravel wrapper for the [Optimus](https://github.com/jenssegers/optimus) API with multiple connections. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
+## Introduction
 
-![cog-laravel-optimus](https://cloud.githubusercontent.com/assets/1849174/21585577/2bdcee26-d0d4-11e6-9cbd-6cf6f4b4ca44.png)
+Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus) by Jens Segers with multiple connections. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
 
 ## Installation
 
@@ -149,7 +151,7 @@ app()->make('Foo')->bar(20);
 
 Run the tests with:
 
-```shell
+```sh
 vendor/bin/phpunit
 ```
 
@@ -159,7 +161,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email support@cybercog.su instead of using the issue tracker.
+If you discover any security related issues, please email a.komarev@cybercog.su instead of using the issue tracker.
 
 ## Credits
 
@@ -167,6 +169,8 @@ If you discover any security related issues, please email support@cybercog.su in
 - [All Contributors](../../contributors)
 
 Package was inspired by [Laravel Hashids](https://github.com/vinkla/laravel-hashids) package.
+
+This package is a wrapper for [Optimus Library](https://github.com/jenssegers/optimus).
 
 ## Alternatives
 
