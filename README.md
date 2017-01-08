@@ -172,6 +172,10 @@ Package was inspired by [Laravel Hashids](https://github.com/vinkla/laravel-hash
 
 This package is a wrapper for [Optimus Library](https://github.com/jenssegers/optimus).
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
 ## Alternatives
 
 *Not found.*
