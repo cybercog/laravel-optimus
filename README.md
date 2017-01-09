@@ -23,7 +23,7 @@ And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    Cog\Optimus\OptimusServiceProvider::class,
+    Cog\Optimus\Providers\OptimusServiceProvider::class,
 ],
 ```
 
