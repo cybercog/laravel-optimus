@@ -16,7 +16,7 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 First, pull in the package through Composer.
 
 ```sh
-composer require cybercog/optimus
+composer require cybercog/laravel-optimus
 ```
 
 And then include the service provider within `app/config/app.php`.
