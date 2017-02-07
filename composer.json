@@ -41,7 +41,7 @@
         "friendsofphp/php-cs-fixer": "^1.11",
         "graham-campbell/testbench": "^3.3",
         "mockery/mockery": "^0.9.5",
-        "orchestra/testbench": "~3.0",
+        "orchestra/testbench": "~3.4.0",
         "phpunit/phpunit": "^5.7"
     },
     "autoload": {
@@ -56,5 +56,7 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
 }
