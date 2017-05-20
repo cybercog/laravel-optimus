@@ -9,14 +9,23 @@
 
 ## Introduction
 
-Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus) by Jens Segers with multiple connections. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
+Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus) by [Jens Segers](https://github.com/jenssegers) with multiple connections support. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
+
+## Features
+
+- Designed to work with Laravel Eloquent models.
+- Configurable multiple connections support.
+- Following PHP Standard Recommendations:
+  - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
+  - [PSR-4 (Autoloading Standard)](http://www.php-fig.org/psr/psr-4/).
+- Covered with unit tests.
 
 ## Installation
 
 First, pull in the package through Composer.
 
 ```sh
-composer require cybercog/laravel-optimus
+$ composer require cybercog/laravel-optimus
 ```
 
 And then include the service provider within `app/config/app.php`.
@@ -39,8 +48,8 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 
 Laravel Optimus requires connection configuration. To get started, you'll need to publish config file:
 
-```bash
-php artisan vendor:publish --provider="Cog\Optimus\Providers\OptimusServiceProvider" --tag="config"
+```sh
+$ php artisan vendor:publish --provider="Cog\Optimus\Providers\OptimusServiceProvider" --tag="config"
 ```
 
 This will create a `config/optimus.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -64,7 +73,7 @@ To get started you will need 3 keys in main connection;
 Luckily for you, there is console command that can do all of this for you, just run the following command:
 
 ```sh
-php vendor/bin/optimus spark
+$ php vendor/bin/optimus spark
 ```
 
 Copy-paste generated integers to your connection config.
@@ -152,7 +161,7 @@ app()->make('Foo')->bar(20);
 Run the tests with:
 
 ```sh
-vendor/bin/phpunit
+$ vendor/bin/phpunit
 ```
 
 ## Contributing
@@ -165,8 +174,11 @@ If you discover any security related issues, please email a.komarev@cybercog.su 
 
 ## Credits
 
-- [Anton Komarev](https://github.com/a-komarev)
-- [All Contributors](../../contributors)
+|  | @mention |
+|---|---|
+| ![@a-komarev](https://avatars2.githubusercontent.com/u/1849174?s=64) | [@a-komarev](https://github.com/a-komarev) |
+
+[Laravel Optimus contributors list](../../contributors)
 
 Package was inspired by [Laravel Hashids](https://github.com/vinkla/laravel-hashids) package.
 
@@ -178,7 +190,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Alternatives
 
-*Not found.*
+- [propaganistas/laravel-fakeid](https://github.com/Propaganistas/Laravel-FakeId)
 
 *Feel free to add more alternatives as Pull Request.*
 
@@ -190,4 +202,4 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 [CyberCog](http://www.cybercog.ru) is a Social Unity of enthusiasts. Research best solutions in product & software development is our passion.
 
-![cybercog-logo](https://cloud.githubusercontent.com/assets/1849174/18418932/e9edb390-7860-11e6-8a43-aa3fad524664.png)
+<a href="http://cybercog.ru"><img src="https://cloud.githubusercontent.com/assets/1849174/18418932/e9edb390-7860-11e6-8a43-aa3fad524664.png" alt="CyberCog"></a>

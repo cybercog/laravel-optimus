@@ -12,7 +12,10 @@
         "id",
         "encrypt",
         "decrypt",
-        "obfuscate"
+        "obfuscate",
+        "url",
+        "uri",
+        "public-id"
     ],
     "authors": [
         {
@@ -40,7 +43,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^1.11",
         "graham-campbell/testbench": "^3.3",
-        "mockery/mockery": "^0.9.5",
+        "mockery/mockery": "^0.9.8",
         "orchestra/testbench": "~3.4.0",
         "phpunit/phpunit": "^5.7"
     },
@@ -53,6 +56,9 @@
         "psr-4": {
             "Cog\\Optimus\\Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true
