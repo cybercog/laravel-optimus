@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus;
+namespace Cog\Laravel\Optimus;
 
 use Jenssegers\Optimus\Optimus;
 
 /**
  * Class OptimusFactory.
  *
- * @package Cog\Optimus
+ * @package Cog\Laravel\Optimus
  */
 class OptimusFactory
 {

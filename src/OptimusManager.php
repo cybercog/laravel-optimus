@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus;
+namespace Cog\Laravel\Optimus;
 
 use Jenssegers\Optimus\Optimus;
 use GrahamCampbell\Manager\AbstractManager;
@@ -20,14 +20,14 @@ use Illuminate\Contracts\Config\Repository;
 /**
  * Class OptimusManager.
  *
- * @package Cog\Optimus
+ * @package Cog\Laravel\Optimus
  */
 class OptimusManager extends AbstractManager
 {
     /**
      * The factory instance.
      *
-     * @var \Cog\Optimus\OptimusFactory
+     * @var \Cog\Laravel\Optimus\OptimusFactory
      */
     private $factory;
 
@@ -35,7 +35,7 @@ class OptimusManager extends AbstractManager
      * Create a new Optimus manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Cog\Optimus\OptimusFactory $factory
+     * @param \Cog\Laravel\Optimus\OptimusFactory $factory
      * @return void
      */
     public function __construct(Repository $config, OptimusFactory $factory)
@@ -69,7 +69,7 @@ class OptimusManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Cog\Optimus\OptimusFactory
+     * @return \Cog\Laravel\Optimus\OptimusFactory
      */
     public function getFactory() : OptimusFactory
     {

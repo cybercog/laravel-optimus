@@ -1,4 +1,4 @@
-![cog-laravel-optimus-3](https://cloud.githubusercontent.com/assets/1849174/21738350/6c08b624-d494-11e6-9895-94e7d5f39010.png)
+![cog-laravel-optimus](https://user-images.githubusercontent.com/1849174/28744713-5b28fffa-746f-11e7-8ca2-0e2a612bc19c.png)
 
 <p align="center">
 <a href="https://travis-ci.org/cybercog/laravel-optimus"><img src="https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square" alt="Build Status"></a>
@@ -16,6 +16,7 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 - Designed to work with Laravel Eloquent models.
 - Configurable multiple connections support.
 - Following PHP Standard Recommendations:
+  - [PSR-1 (Basic Coding Standard)](http://www.php-fig.org/psr/psr-1/).
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
   - [PSR-4 (Autoloading Standard)](http://www.php-fig.org/psr/psr-4/).
 - Covered with unit tests.
@@ -32,7 +33,7 @@ And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    Cog\Optimus\Providers\OptimusServiceProvider::class,
+    Cog\Laravel\Optimus\Providers\OptimusServiceProvider::class,
 ],
 ```
 
@@ -40,7 +41,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 
 ```php
 'aliases' => [
-    'Optimus' => Cog\Optimus\Facades\Optimus::class,
+    'Optimus' => Cog\Laravel\Optimus\Facades\Optimus::class,
 ],
 ```
 
@@ -49,7 +50,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 Laravel Optimus requires connection configuration. To get started, you'll need to publish config file:
 
 ```sh
-$ php artisan vendor:publish --provider="Cog\Optimus\Providers\OptimusServiceProvider" --tag="config"
+$ php artisan vendor:publish --provider="Cog\Laravel\Optimus\Providers\OptimusServiceProvider" --tag="config"
 ```
 
 This will create a `config/optimus.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -99,13 +100,13 @@ Here you can see an example of just how simple this package is to use. Out of th
 #### Encode ID
 
 ```php 
-Cog\Optimus\Facades\Optimus::encode(20); // 1535832388
+Cog\Laravel\Optimus\Facades\Optimus::encode(20); // 1535832388
 ```
 
 #### Decode ID
 
 ```php
-Cog\Optimus\Facades\Optimus::decode(1535832388); // 20
+Cog\Laravel\Optimus\Facades\Optimus::decode(1535832388); // 20
 ```
 
 #### Alter Optimus connection
@@ -113,7 +114,7 @@ Cog\Optimus\Facades\Optimus::decode(1535832388); // 20
 The Optimus manager will behave like it is a `Jenssegers\Optimus\Optimus`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
-use Cog\Optimus\Facades\Optimus;
+use Cog\Laravel\Optimus\Facades\Optimus;
 
 // Writing this…
 Optimus::connection('main')->encode($id);
@@ -136,7 +137,7 @@ Optimus::setDefaultConnection('alternative'); // The default is now alternative.
 If you prefer to use dependency injection over facades like me, then you can inject the manager:
 
 ```php
-use Cog\Optimus\OptimusManager;
+use Cog\Laravel\Optimus\OptimusManager;
 
 class Foo
 {

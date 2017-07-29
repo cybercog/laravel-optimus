@@ -11,17 +11,17 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus\Tests\Facades;
+namespace Cog\Laravel\Optimus\Tests\Facades;
 
-use Cog\Optimus\OptimusManager;
-use Cog\Optimus\Facades\Optimus;
-use Cog\Optimus\Tests\AbstractTestCase;
+use Cog\Laravel\Optimus\OptimusManager;
+use Cog\Laravel\Optimus\Facades\Optimus;
+use Cog\Laravel\Optimus\Tests\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 /**
  * Class OptimusTest.
  *
- * @package Cog\Optimus\Tests\Facades
+ * @package Cog\Laravel\Optimus\Tests\Facades
  */
 class OptimusTest extends AbstractTestCase
 {

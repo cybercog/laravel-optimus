@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus\Tests;
+namespace Cog\Laravel\Optimus\Tests;
 
 use Mockery;
-use Cog\Optimus\OptimusFactory;
-use Cog\Optimus\OptimusManager;
+use Cog\Laravel\Optimus\OptimusFactory;
+use Cog\Laravel\Optimus\OptimusManager;
 use Jenssegers\Optimus\Optimus;
 use Illuminate\Contracts\Config\Repository;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
@@ -23,7 +23,7 @@ use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 /**
  * Class OptimusManagerTest.
  *
- * @package Cog\Optimus\Tests
+ * @package Cog\Laravel\Optimus\Tests
  */
 class OptimusManagerTest extends AbstractTestBenchTestCase
 {

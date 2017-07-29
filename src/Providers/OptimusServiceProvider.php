@@ -11,10 +11,10 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus\Providers;
+namespace Cog\Laravel\Optimus\Providers;
 
-use Cog\Optimus\OptimusFactory;
-use Cog\Optimus\OptimusManager;
+use Cog\Laravel\Optimus\OptimusFactory;
+use Cog\Laravel\Optimus\OptimusManager;
 use Jenssegers\Optimus\Optimus;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container\Container;
@@ -24,7 +24,7 @@ use Illuminate\Foundation\Application as LaravelApplication;
 /**
  * Class OptimusServiceProvider.
  *
- * @package Cog\Optimus
+ * @package Cog\Laravel\Optimus\Providers
  */
 class OptimusServiceProvider extends ServiceProvider
 {
