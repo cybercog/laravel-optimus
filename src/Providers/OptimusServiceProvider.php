@@ -15,11 +15,11 @@ namespace Cog\Laravel\Optimus\Providers;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
-use Jenssegers\Optimus\Optimus;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container\Container;
-use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Support\ServiceProvider;
+use Jenssegers\Optimus\Optimus;
+use Laravel\Lumen\Application as LumenApplication;
 
 /**
  * Class OptimusServiceProvider.
