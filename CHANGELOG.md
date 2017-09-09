@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-optimus` will be documented in this file.
 
-## [2.0.0] - 2017-07-29
+## [2.0.0] - 2017-09-09
 
 ### Added
 
