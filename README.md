@@ -18,7 +18,6 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
  - [Configuration](#configuration)
  - [Usage](#usage)
  - [Change log](#change-log)
- - [Upgrading](#upgrading)
  - [Contributing](#contributing)
  - [Testing](#testing)
  - [Security](#security)
@@ -182,10 +181,6 @@ app()->make('Foo')->bar(20);
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Upgrading
-
-Please see [UPGRADING](UPGRADING.md) for detailed upgrade instructions.
 
 ## Contributing
 
