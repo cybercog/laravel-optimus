@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Laravel\Optimus\Tests;
+namespace Cog\Tests\Laravel\Optimus;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Jenssegers\Optimus\Optimus;
@@ -19,7 +19,7 @@ use Jenssegers\Optimus\Optimus;
 /**
  * Class OptimusFactoryTest.
  *
- * @package Cog\Laravel\Optimus\Tests
+ * @package Cog\Tests\Laravel\Optimus
  */
 class OptimusFactoryTest extends AbstractTestCase
 {
@@ -38,6 +38,6 @@ class OptimusFactoryTest extends AbstractTestCase
 
     protected function getOptimusFactory()
     {
-        return new OptimusFactory();
+        return new OptimusFactory;
     }
 }

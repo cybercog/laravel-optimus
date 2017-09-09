@@ -55,7 +55,7 @@ class OptimusServiceProvider extends ServiceProvider
      *
      * @return string[]
      */
-    public function provides() : array
+    public function provides(): array
     {
         return [
             'optimus',
@@ -90,7 +90,7 @@ class OptimusServiceProvider extends ServiceProvider
     protected function bindFactory()
     {
         $this->app->singleton('optimus.factory', function () {
-            return new OptimusFactory();
+            return new OptimusFactory;
         });
 
         $this->app->alias('optimus.factory', OptimusFactory::class);

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Laravel\Optimus\Tests;
+namespace Cog\Tests\Laravel\Optimus;
 
 use Cog\Laravel\Optimus\Providers\OptimusServiceProvider;
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
@@ -19,7 +19,7 @@ use GrahamCampbell\TestBench\AbstractPackageTestCase;
 /**
  * Class AbstractTestCase.
  *
- * @package Cog\Laravel\Optimus\Tests
+ * @package Cog\Tests\Laravel\Optimus
  */
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {

@@ -44,7 +44,7 @@
         "friendsofphp/php-cs-fixer": "^1.11",
         "graham-campbell/testbench": "^4.0",
         "mockery/mockery": "^0.9.8",
-        "orchestra/testbench": "~3.4.0",
+        "orchestra/testbench": "~3.4.0|~3.5.0",
         "phpunit/phpunit": "^6.2"
     },
     "autoload": {
@@ -54,7 +54,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cog\\Laravel\\Optimus\\Tests\\": "tests/"
+            "Cog\\Tests\\Laravel\\Optimus\\": "tests/"
         }
     },
     "scripts": {

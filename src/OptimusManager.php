@@ -51,7 +51,7 @@ class OptimusManager extends AbstractManager
      * @param array $config
      * @return \Jenssegers\Optimus\Optimus
      */
-    protected function createConnection(array $config) : Optimus
+    protected function createConnection(array $config): Optimus
     {
         return $this->factory->make($config);
     }
@@ -61,7 +61,7 @@ class OptimusManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName() : string
+    protected function getConfigName(): string
     {
         return 'optimus';
     }
@@ -71,7 +71,7 @@ class OptimusManager extends AbstractManager
      *
      * @return \Cog\Laravel\Optimus\OptimusFactory
      */
-    public function getFactory() : OptimusFactory
+    public function getFactory(): OptimusFactory
     {
         return $this->factory;
     }

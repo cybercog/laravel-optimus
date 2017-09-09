@@ -11,10 +11,28 @@
 
 Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus) by [Jens Segers](https://github.com/jenssegers) with multiple connections support. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
 
+ ## Contents
+ 
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Configuration](#configuration)
+ - [Usage](#usage)
+ - [Change log](#change-log)
+ - [Upgrading](#upgrading)
+ - [Contributing](#contributing)
+ - [Testing](#testing)
+ - [Security](#security)
+ - [Credits](#credits)
+ - [Alternatives](#alternatives)
+ - [License](#license)
+ - [About CyberCog](#about-cybercog)
+
 ## Features
 
 - Designed to work with Laravel Eloquent models.
 - Configurable multiple connections support.
+- Dependency Injection ready.
+- Includes Facade.
 - Following PHP Standard Recommendations:
   - [PSR-1 (Basic Coding Standard)](http://www.php-fig.org/psr/psr-1/).
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
@@ -29,7 +47,11 @@ First, pull in the package through Composer.
 $ composer require cybercog/laravel-optimus
 ```
 
-And then include the service provider within `app/config/app.php`.
+**If you are using Laravel 5.5 you can skip register package part.** 
+
+#### Register package on Laravel 5.4 and lower
+
+Include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
@@ -157,6 +179,18 @@ class Foo
 app()->make('Foo')->bar(20);
 ```
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Upgrading
+
+Please see [UPGRADING](UPGRADING.md) for detailed upgrade instructions.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
 ## Testing
 
 Run the tests with:
@@ -164,10 +198,6 @@ Run the tests with:
 ```sh
 $ vendor/bin/phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
@@ -185,12 +215,9 @@ Package was inspired by [Laravel Hashids](https://github.com/vinkla/laravel-hash
 
 This package is a wrapper for [Optimus Library](https://github.com/jenssegers/optimus).
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
 ## Alternatives
 
+- [vinkla/laravel-hashids](https://github.com/vinkla/laravel-hashids)
 - [propaganistas/laravel-fakeid](https://github.com/Propaganistas/Laravel-FakeId)
 
 *Feel free to add more alternatives as Pull Request.*
@@ -202,5 +229,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## About CyberCog
 
 [CyberCog](http://www.cybercog.ru) is a Social Unity of enthusiasts. Research best solutions in product & software development is our passion.
+
+- [Follow us on Twitter](https://twitter.com/cybercog)
+- [Read our articles on Medium](https://medium.com/cybercog)
 
 <a href="http://cybercog.ru"><img src="https://cloud.githubusercontent.com/assets/1849174/18418932/e9edb390-7860-11e6-8a43-aa3fad524664.png" alt="CyberCog"></a>
