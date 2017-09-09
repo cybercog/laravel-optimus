@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus;
+namespace Cog\Laravel\Optimus;
 
 use Jenssegers\Optimus\Optimus;
 
 /**
  * Class OptimusFactory.
  *
- * @package Cog\Optimus
+ * @package Cog\Laravel\Optimus
  */
 class OptimusFactory
 {
@@ -28,7 +28,7 @@ class OptimusFactory
      * @param array $config
      * @return \Jenssegers\Optimus\Optimus
      */
-    public function make(array $config) : Optimus
+    public function make(array $config): Optimus
     {
         $config = $this->getConfig($config);
 
@@ -43,7 +43,7 @@ class OptimusFactory
      *
      * @throws \InvalidArgumentException
      */
-    protected function getConfig(array $config) : array
+    protected function getConfig(array $config): array
     {
         return [
             'prime' => array_get($config, 'prime', 0),
@@ -58,7 +58,7 @@ class OptimusFactory
      * @param array $config
      * @return \Jenssegers\Optimus\Optimus
      */
-    protected function getClient(array $config) : Optimus
+    protected function getClient(array $config): Optimus
     {
         return new Optimus($config['prime'], $config['inverse'], $config['random']);
     }

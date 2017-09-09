@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus\Facades;
+namespace Cog\Laravel\Optimus\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Optimus.
  *
- * @package Cog\Optimus\Facades
+ * @package Cog\Laravel\Optimus\Facades
  */
 class Optimus extends Facade
 {
@@ -27,7 +27,7 @@ class Optimus extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor() : string
+    protected static function getFacadeAccessor(): string
     {
         return 'optimus';
     }

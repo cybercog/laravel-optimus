@@ -11,20 +11,20 @@
 
 declare(strict_types=1);
 
-namespace Cog\Optimus\Providers;
+namespace Cog\Laravel\Optimus\Providers;
 
-use Cog\Optimus\OptimusFactory;
-use Cog\Optimus\OptimusManager;
-use Jenssegers\Optimus\Optimus;
-use Illuminate\Support\ServiceProvider;
+use Cog\Laravel\Optimus\OptimusFactory;
+use Cog\Laravel\Optimus\OptimusManager;
 use Illuminate\Contracts\Container\Container;
-use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Support\ServiceProvider;
+use Jenssegers\Optimus\Optimus;
+use Laravel\Lumen\Application as LumenApplication;
 
 /**
  * Class OptimusServiceProvider.
  *
- * @package Cog\Optimus
+ * @package Cog\Laravel\Optimus\Providers
  */
 class OptimusServiceProvider extends ServiceProvider
 {
@@ -55,7 +55,7 @@ class OptimusServiceProvider extends ServiceProvider
      *
      * @return string[]
      */
-    public function provides() : array
+    public function provides(): array
     {
         return [
             'optimus',
@@ -90,7 +90,7 @@ class OptimusServiceProvider extends ServiceProvider
     protected function bindFactory()
     {
         $this->app->singleton('optimus.factory', function () {
-            return new OptimusFactory();
+            return new OptimusFactory;
         });
 
         $this->app->alias('optimus.factory', OptimusFactory::class);
