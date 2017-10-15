@@ -114,6 +114,10 @@ This facade will dynamically pass static method calls to the `optimus` object in
 
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
 
+#### Traits\OptimusEncodedRouteKey
+
+This trait can be used in an Eloquent model to enable automatic route model binding. You can then type hint a model in a route closure or a controller and Laravel will try to find it based on the encoded ID. 
+
 ### Examples
 
 Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
@@ -176,6 +180,47 @@ class Foo
 }
 
 app()->make('Foo')->bar(20);
+```
+
+#### Eloquent Model Trait
+
+To enable implicit route model binding based on the encoded ID, all you need to do is [configure the prime numbers](#optimus-numbers-generation) and use the `OptimusEncodedRouteKey` trait in your model.
+
+If you don't want to use the default Optimus connection, you can specify a custom connection by adding an `$optimusConnection` property to you model.
+
+```php
+use Cog\Laravel\Optimus\Traits\OptimusEncodedRouteKey;
+use Illuminate\Database\Eloquent\Model;
+
+class YourModel extends Model
+{
+    use OptimusEncodedRouteKey;
+    
+    protected $optimusConnection = 'custom'; // optional
+}
+```
+
+Now you can type hint your model in a route closure or controller and Laravel will use the encoded ID to query the database.
+
+Note that implicit route model binding requires Laravel's `SubstituteBindings` middleware, which is part of the `web` middleware group.
+
+```php
+Route::get('url/to/{model}', function (YourModel $model) {
+    // ...
+})->middleware('web');
+```
+
+To generate URL's to these routes you can either get the encoded route key:
+
+```php
+$encodedId = $model->getRouteKey();
+$url = url("url/to/{$encodedId}");
+```
+
+Or you can use named routes and pass it the model. Laravel will do the rest.
+
+```php
+$url = route('my.named.route', [$model]);
 ```
 
 ## Changelog
