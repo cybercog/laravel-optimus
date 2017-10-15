@@ -81,7 +81,8 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $user = $this->createUserWithDefaultOptimusConnection();
         $encodedId = Optimus::encode($user->id);
 
-        Route::get('users/{user}', function () {})->name('test.route');
+        Route::get('users/{user}', function () {
+        })->name('test.route');
 
         $expectedUrl = "{$this->baseUrl}/users/{$encodedId}";
         $generatedUrl = route('test.route', [$user]);
@@ -124,7 +125,7 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
      */
     protected function configurePrimeNumbers()
     {
-        config()->set("optimus.connections", [
+        config()->set('optimus.connections', [
             'main' => [
                 'prime' => 1490261603,
                 'inverse' => 1573362507,
@@ -134,7 +135,7 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
                 'prime' => 1770719809,
                 'inverse' => 1417283009,
                 'random' => 508877541,
-            ]
+            ],
         ]);
     }
 }
