@@ -11,20 +11,21 @@
 
 Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus) by [Jens Segers](https://github.com/jenssegers) with multiple connections support. Optimus is a small open-source library that generates short, unique, non-sequential ids from numbers. With this library, you can transform your internal id's to obfuscated integers based on Knuth's integer hash. It is similar to Hashids, but will generate integers instead of random strings. It is also super fast.
 
- ## Contents
+## Contents
  
- - [Features](#features)
- - [Installation](#installation)
- - [Configuration](#configuration)
- - [Usage](#usage)
- - [Change log](#change-log)
- - [Contributing](#contributing)
- - [Testing](#testing)
- - [Security](#security)
- - [Credits](#credits)
- - [Alternatives](#alternatives)
- - [License](#license)
- - [About CyberCog](#about-cybercog)
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+  - [Examples](#examples)
+- [Change log](#change-log)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Security](#security)
+- [Contributors](#contributors)
+- [Alternatives](#alternatives)
+- [License](#license)
+- [About CyberCog](#about-cybercog)
 
 ## Features
 
@@ -32,6 +33,7 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 - Configurable multiple connections support.
 - Dependency Injection ready.
 - Includes Facade.
+- Implicit route model binding.
 - Following PHP Standard Recommendations:
   - [PSR-1 (Basic Coding Standard)](http://www.php-fig.org/psr/psr-1/).
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
@@ -110,7 +112,7 @@ This is the class of most interest. It is bound to the ioc container as `optimus
 
 This facade will dynamically pass static method calls to the `optimus` object in the ioc container which by default is the `OptimusManager` class.
 
-#### OptimusServiceProvider
+#### Providers\OptimusServiceProvider
 
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
 
@@ -166,25 +168,25 @@ use Cog\Laravel\Optimus\OptimusManager;
 
 class Foo
 {
-	protected $optimus;
+    protected $optimus;
 
-	public function __construct(OptimusManager $optimus)
-	{
-		$this->optimus = $optimus;
-	}
-
-	public function bar($id)
-	{
-		return $this->optimus->encode($id)
-	}
+    public function __construct(OptimusManager $optimus)
+    {
+        $this->optimus = $optimus;
+    }
+    
+    public function bar($id)
+    {
+        return $this->optimus->encode($id)
+    }
 }
 
 app()->make('Foo')->bar(20);
 ```
 
-#### Eloquent Model Trait
+#### Implicit route model binding
 
-To enable implicit route model binding based on the encoded ID, all you need to do is [configure the prime numbers](#optimus-numbers-generation) and use the `OptimusEncodedRouteKey` trait in your model.
+To enable [implicit route model binding](https://laravel.com/docs/5.5/routing#implicit-binding) based on the encoded ID, all you need to do is [configure the prime numbers](#optimus-numbers-generation) and use the `Cog\Laravel\Optimus\Traits\OptimusEncodedRouteKey` trait in your model.
 
 If you don't want to use the default Optimus connection, you can specify a custom connection by adding an `$optimusConnection` property to you model.
 
@@ -202,7 +204,7 @@ class YourModel extends Model
 
 Now you can type hint your model in a route closure or controller and Laravel will use the encoded ID to query the database.
 
-Note that implicit route model binding requires Laravel's `SubstituteBindings` middleware, which is part of the `web` middleware group.
+*Note: Implicit route model binding requires Laravel's `Illuminate\Routing\Middleware\SubstituteBindings` middleware, which is part of the `web` middleware group.*
 
 ```php
 Route::get('url/to/{model}', function (YourModel $model) {
@@ -220,7 +222,7 @@ $url = url("url/to/{$encodedId}");
 Or you can use named routes and pass it the model. Laravel will do the rest.
 
 ```php
-$url = route('my.named.route', [$model]);
+$url = route('my.named.route', $model);
 ```
 
 ## Changelog
@@ -243,11 +245,10 @@ $ vendor/bin/phpunit
 
 If you discover any security related issues, please email a.komarev@cybercog.su instead of using the issue tracker.
 
-## Credits
+## Contributors
 
-|  | @mention |
-|---|---|
-| ![@a-komarev](https://avatars2.githubusercontent.com/u/1849174?s=64) | [@a-komarev](https://github.com/a-komarev) |
+| <a href="https://github.com/a-komarev">![@a-komarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/ivanvermeyen">![@ivanvermeyen](https://avatars.githubusercontent.com/u/3598622?s=110)<br />Ivan Vermeyen</a> |  
+| :---: | :---: |
 
 [Laravel Optimus contributors list](../../contributors)
 

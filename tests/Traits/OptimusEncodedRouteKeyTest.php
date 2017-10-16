@@ -18,7 +18,7 @@ use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithCustomOptimusConnection;
 use Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithDefaultOptimusConnection;
 use Illuminate\Routing\Middleware\SubstituteBindings;
-use Route;
+use Illuminate\Support\Facades\Route;
 
 /**
  * Class OptimusEncodedRouteKeyTest.
@@ -85,7 +85,7 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         })->name('test.route');
 
         $expectedUrl = "{$this->baseUrl}/users/{$encodedId}";
-        $generatedUrl = route('test.route', [$user]);
+        $generatedUrl = route('test.route', $user);
 
         $this->assertEquals($expectedUrl, $generatedUrl);
     }
