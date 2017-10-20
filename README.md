@@ -29,11 +29,11 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 
 ## Features
 
+- Configurable multiple Optimus connections support.
+- Implicit route model binding.
 - Designed to work with Laravel Eloquent models.
-- Configurable multiple connections support.
 - Dependency Injection ready.
 - Includes Facade.
-- Implicit route model binding.
 - Following PHP Standard Recommendations:
   - [PSR-1 (Basic Coding Standard)](http://www.php-fig.org/psr/psr-1/).
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
