@@ -48,9 +48,9 @@ First, pull in the package through Composer.
 $ composer require cybercog/laravel-optimus
 ```
 
-**If you are using Laravel 5.5 you can skip register package part.** 
+#### Register Package Manually (optional)
 
-#### Register package on Laravel 5.4 and lower
+If you disabled package auto-discovery you can register it manually.
 
 Include the service provider within `app/config/app.php`.
 
