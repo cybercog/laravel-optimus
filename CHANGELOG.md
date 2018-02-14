@@ -20,7 +20,7 @@ All notable changes to `laravel-optimus` will be documented in this file.
 
 ### Added
 
-- Implicit route model binding ([#6](https://github.com/cybercog/laravel-optimus/pull/6))
+- ([#6](https://github.com/cybercog/laravel-optimus/pull/6)) Implicit route model binding
 
 ## [2.0.0] - 2017-09-09
 
