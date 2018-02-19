@@ -265,7 +265,7 @@ This package is a wrapper for [Optimus Library](https://github.com/jenssegers/op
 
 ## License
 
-- `Laravel Optimus` package is open-sourced software licensed under the [MIT license](LICENSE).
+- `Laravel Optimus` package is open-sourced software licensed under the [MIT license](LICENSE) by Anton Komarev.
 
 ## About CyberCog
 
