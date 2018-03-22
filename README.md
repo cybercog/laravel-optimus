@@ -1,9 +1,12 @@
+# Laravel Optimus
+
 ![cog-laravel-optimus](https://user-images.githubusercontent.com/1849174/28744713-5b28fffa-746f-11e7-8ca2-0e2a612bc19c.png)
 
 <p align="center">
+<a href="https://github.com/cybercog/laravel-optimus/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square" alt="Releases"></a>
 <a href="https://travis-ci.org/cybercog/laravel-optimus"><img src="https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://styleci.io/repos/77817858"><img src="https://styleci.io/repos/77817858/shield" alt="StyleCI"></a>
-<a href="https://github.com/cybercog/laravel-optimus/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square" alt="Releases"></a>
+<a href="https://scrutinizer-ci.com/g/cybercog/laravel-optimus/?branch=master"><img src="https://img.shields.io/scrutinizer/g/cybercog/laravel-optimus.svg?style=flat-square" alt="Code Quality"></a>
 <a href="https://github.com/cybercog/laravel-optimus/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/laravel-optimus.svg?style=flat-square" alt="License"></a>
 </p>
 
