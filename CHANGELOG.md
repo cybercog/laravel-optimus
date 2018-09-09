@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-optimus` will be documented in this file.
 
+## [3.1.0] - 2017-02-14
+
+### Added
+
+- ([#13](https://github.com/cybercog/laravel-optimus/pull/13)) Laravel 5.7 support
+
 ## [3.0.0] - 2017-02-14
 
 ### Added
@@ -37,6 +43,7 @@ All notable changes to `laravel-optimus` will be documented in this file.
 
 Initial release
 
+[3.1.0]: https://github.com/cybercog/laravel-optimus/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/cybercog/laravel-optimus/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/cybercog/laravel-optimus/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/cybercog/laravel-optimus/compare/1.0.0...2.0.0
