@@ -2,8 +2,6 @@
 
 namespace Cog\Laravel\Optimus\Traits;
 
-use Cog\Laravel\Optimus\Facades\Optimus;
-
 trait OptimusEncodedRouteKey
 {
     /**
@@ -45,6 +43,6 @@ trait OptimusEncodedRouteKey
             $connection = $this->optimusConnection;
         }
 
-        return Optimus::connection($connection);
+        return app('optimus')->connection($connection);
     }
 }
