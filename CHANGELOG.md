@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-optimus` will be documented in this file.
 
+## [3.2.0] - 2018-11-10
+
+### Fixed
+
+- ([#14](https://github.com/cybercog/laravel-optimus/pull/14)) Fixed Lumen support in `OptimusEncodedRouteKey` trait
+
 ## [3.1.0] - 2017-09-09
 
 ### Added
@@ -43,6 +49,7 @@ All notable changes to `laravel-optimus` will be documented in this file.
 
 Initial release
 
+[3.2.0]: https://github.com/cybercog/laravel-optimus/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/cybercog/laravel-optimus/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/cybercog/laravel-optimus/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/cybercog/laravel-optimus/compare/2.0.0...2.1.0

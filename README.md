@@ -250,8 +250,8 @@ If you discover any security related issues, please email a.komarev@cybercog.su 
 
 ## Contributors
 
-| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/ivanvermeyen">![@ivanvermeyen](https://avatars.githubusercontent.com/u/3598622?s=110)<br />Ivan Vermeyen</a> |  
-| :---: | :---: |
+| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/ivanvermeyen">![@ivanvermeyen](https://avatars.githubusercontent.com/u/3598622?s=110)<br />Ivan Vermeyen</a> | <a href="https://github.com/tur-nr">![@tur-nr](https://avatars.githubusercontent.com/u/817134?s=110)<br />Christopher Turner</a> |  
+| :---: | :---: | :---: |
 
 [Laravel Optimus contributors list](../../contributors)
 
