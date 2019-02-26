@@ -12,5 +12,6 @@ class UserWithCustomOptimusConnection extends Model
     protected $optimusConnection = 'custom';
 
     protected $table = 'users';
+
     protected $guarded = [];
 }

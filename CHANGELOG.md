@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-optimus` will be documented in this file.
 
+## [3.3.0] - 2019-02-26
+
+### Added
+
+- Laravel 5.8 support
+
 ## [3.2.0] - 2018-11-10
 
 ### Fixed

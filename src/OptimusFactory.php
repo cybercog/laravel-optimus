@@ -15,11 +15,6 @@ namespace Cog\Laravel\Optimus;
 
 use Jenssegers\Optimus\Optimus;
 
-/**
- * Class OptimusFactory.
- *
- * @package Cog\Laravel\Optimus
- */
 class OptimusFactory
 {
     /**

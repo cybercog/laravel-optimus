@@ -18,11 +18,6 @@ use Cog\Laravel\Optimus\Facades\Optimus;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
-/**
- * Class OptimusTest.
- *
- * @package Cog\Tests\Laravel\Optimus\Facades
- */
 class OptimusTest extends AbstractTestCase
 {
     use FacadeTrait;
@@ -32,7 +27,7 @@ class OptimusTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeAccessor()
+    protected function getFacadeAccessor(): string
     {
         return 'optimus';
     }
@@ -42,7 +37,7 @@ class OptimusTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeClass()
+    protected function getFacadeClass(): string
     {
         return Optimus::class;
     }
@@ -52,7 +47,7 @@ class OptimusTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeRoot()
+    protected function getFacadeRoot(): string
     {
         return OptimusManager::class;
     }

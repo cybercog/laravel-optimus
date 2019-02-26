@@ -21,11 +21,6 @@ use Illuminate\Support\ServiceProvider;
 use Jenssegers\Optimus\Optimus;
 use Laravel\Lumen\Application as LumenApplication;
 
-/**
- * Class OptimusServiceProvider.
- *
- * @package Cog\Laravel\Optimus\Providers
- */
 class OptimusServiceProvider extends ServiceProvider
 {
     /**

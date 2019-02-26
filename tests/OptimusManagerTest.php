@@ -20,14 +20,9 @@ use Jenssegers\Optimus\Optimus;
 use Illuminate\Contracts\Config\Repository;
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 
-/**
- * Class OptimusManagerTest.
- *
- * @package Cog\Tests\Laravel\Optimus
- */
 class OptimusManagerTest extends AbstractTestBenchTestCase
 {
-    public function testCreateConnection()
+    public function testCreateConnection(): void
     {
         $config = ['path' => __DIR__];
 

@@ -18,26 +18,21 @@ use Cog\Laravel\Optimus\OptimusManager;
 use Jenssegers\Optimus\Optimus;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 
-/**
- * Class ServiceProviderTest.
- *
- * @package Cog\Tests\Laravel\Optimus\Providers
- */
 class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
 
-    public function testOptimusFactoryIsInjectable()
+    public function testOptimusFactoryIsInjectable(): void
     {
         $this->assertIsInjectable(OptimusFactory::class);
     }
 
-    public function testOptimusManagerIsInjectable()
+    public function testOptimusManagerIsInjectable(): void
     {
         $this->assertIsInjectable(OptimusManager::class);
     }
 
-    public function testBindings()
+    public function testBindings(): void
     {
         $this->assertIsInjectable(Optimus::class);
 
