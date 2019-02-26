@@ -55,6 +55,7 @@ All notable changes to `laravel-optimus` will be documented in this file.
 
 Initial release
 
+[3.3.0]: https://github.com/cybercog/laravel-optimus/compare/3.2.0...v3.3.0
 [3.2.0]: https://github.com/cybercog/laravel-optimus/compare/3.1.0...3.2.0
 [3.1.0]: https://github.com/cybercog/laravel-optimus/compare/3.0.0...3.1.0
 [3.0.0]: https://github.com/cybercog/laravel-optimus/compare/2.1.0...3.0.0
