@@ -15,11 +15,6 @@ namespace Cog\Laravel\Optimus\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * Class Optimus.
- *
- * @package Cog\Laravel\Optimus\Facades
- */
 class Optimus extends Facade
 {
     /**

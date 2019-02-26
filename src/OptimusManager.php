@@ -17,11 +17,6 @@ use Jenssegers\Optimus\Optimus;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
-/**
- * Class OptimusManager.
- *
- * @package Cog\Laravel\Optimus
- */
 class OptimusManager extends AbstractManager
 {
     /**

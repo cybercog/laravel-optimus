@@ -10,5 +10,6 @@ class UserWithDefaultOptimusConnection extends Model
     use OptimusEncodedRouteKey;
 
     protected $table = 'users';
+
     protected $guarded = [];
 }

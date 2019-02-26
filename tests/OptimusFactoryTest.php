@@ -16,14 +16,9 @@ namespace Cog\Tests\Laravel\Optimus;
 use Cog\Laravel\Optimus\OptimusFactory;
 use Jenssegers\Optimus\Optimus;
 
-/**
- * Class OptimusFactoryTest.
- *
- * @package Cog\Tests\Laravel\Optimus
- */
 class OptimusFactoryTest extends AbstractTestCase
 {
-    public function testMakeStandard()
+    public function testMakeStandard(): void
     {
         $factory = $this->getOptimusFactory();
 
@@ -36,7 +31,7 @@ class OptimusFactoryTest extends AbstractTestCase
         $this->assertInstanceOf(Optimus::class, $return);
     }
 
-    protected function getOptimusFactory()
+    protected function getOptimusFactory(): OptimusFactory
     {
         return new OptimusFactory;
     }
