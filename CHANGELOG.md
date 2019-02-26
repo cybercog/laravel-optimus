@@ -6,7 +6,7 @@ All notable changes to `laravel-optimus` will be documented in this file.
 
 ### Added
 
-- Laravel 5.8 support
+- ([#15](https://github.com/cybercog/laravel-optimus/pull/15)) Laravel 5.8 support
 
 ## [3.2.0] - 2018-11-10
 
