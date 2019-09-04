@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\Optimus;
 
+use Illuminate\Support\Arr;
 use Jenssegers\Optimus\Optimus;
 
 class OptimusFactory
@@ -41,9 +42,9 @@ class OptimusFactory
     protected function getConfig(array $config): array
     {
         return [
-            'prime' => array_get($config, 'prime', 0),
-            'inverse' => array_get($config, 'inverse', 0),
-            'random' => array_get($config, 'random', 0),
+            'prime' => Arr::get($config, 'prime', 0),
+            'inverse' => Arr::get($config, 'inverse', 0),
+            'random' => Arr::get($config, 'random', 0),
         ];
     }
 
