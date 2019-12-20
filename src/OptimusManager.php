@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\Optimus;
 
-use Jenssegers\Optimus\Optimus;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
+use Jenssegers\Optimus\Optimus;
 
 class OptimusManager extends AbstractManager
 {

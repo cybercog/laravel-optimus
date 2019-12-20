@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Cog\Tests\Laravel\Optimus\Facades;
 
-use Cog\Laravel\Optimus\OptimusManager;
 use Cog\Laravel\Optimus\Facades\Optimus;
+use Cog\Laravel\Optimus\OptimusManager;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 

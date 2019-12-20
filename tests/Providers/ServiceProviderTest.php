@@ -15,8 +15,8 @@ namespace Cog\Tests\Laravel\Optimus;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
-use Jenssegers\Optimus\Optimus;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Jenssegers\Optimus\Optimus;
 
 class ServiceProviderTest extends AbstractTestCase
 {
