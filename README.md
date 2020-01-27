@@ -47,7 +47,7 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 
 First, pull in the package through Composer.
 
-```sh
+```shell script
 $ composer require cybercog/laravel-optimus
 ```
 
@@ -75,7 +75,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 
 Laravel Optimus requires connection configuration. To get started, you'll need to publish config file:
 
-```sh
+```shell script
 $ php artisan vendor:publish --provider="Cog\Laravel\Optimus\Providers\OptimusServiceProvider" --tag="config"
 ```
 
@@ -99,7 +99,7 @@ To get started you will need 3 keys in main connection;
 
 Luckily for you, there is console command that can do all of this for you, just run the following command:
 
-```sh
+```shell script
 $ php vendor/bin/optimus spark
 ```
 
@@ -240,7 +240,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Run the tests with:
 
-```sh
+```shell script
 $ vendor/bin/phpunit
 ```
 
