@@ -25,7 +25,7 @@ trait OptimusEncodedRouteKey
      */
     public function resolveRouteBinding($value)
     {
-        if ( ! ctype_digit($value)) {
+        if (!ctype_digit($value)) {
             return null;
         }
 
