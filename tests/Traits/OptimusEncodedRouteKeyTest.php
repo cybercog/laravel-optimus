@@ -85,6 +85,14 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $this->assertEquals($expectedUrl, $generatedUrl);
     }
 
+    public function testNonExistingIDsReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding(999);
+
+        $this->assertNull($resolvedUser);
+    }
+
     /**
      * Create a test user with default Optimus connection in the database.
      *
