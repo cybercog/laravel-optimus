@@ -25,7 +25,9 @@ trait OptimusEncodedRouteKey
      */
     public function resolveRouteBinding($value)
     {
-        $value = intval($value);
+        if ( ! ctype_digit($value)) {
+            return null;
+        }
 
         $id = $this->getOptimus()->decode($value);
 
