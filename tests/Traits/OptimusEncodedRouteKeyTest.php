@@ -93,6 +93,31 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $this->assertNull($resolvedUser);
     }
 
+    public function testStringValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding('not-an-integer');
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testStringValuesContainingIntegersReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding('1-not-just-an-integer');
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testStringValuesMayContainingEncodedRouteKeys()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $encodedRouteKey = $user->getRouteKey();
+        $resolvedUser = $user->resolveRouteBinding("{$encodedRouteKey}-suffix-to-the-encoded-route-key");
+
+        $this->assertTrue($resolvedUser->is($user));
+    }
+
     /**
      * Create a test user with default Optimus connection in the database.
      *
