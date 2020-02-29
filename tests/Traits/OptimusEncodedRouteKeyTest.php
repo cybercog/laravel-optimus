@@ -19,6 +19,7 @@ use Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithCustomOptimusConnection;
 use Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithDefaultOptimusConnection;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
+use Jenssegers\Optimus\Optimus as JenssegersOptimus;
 
 class OptimusEncodedRouteKeyTest extends AbstractTestCase
 {
@@ -83,6 +84,69 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $generatedUrl = route('test.route', $user);
 
         $this->assertEquals($expectedUrl, $generatedUrl);
+    }
+
+    public function testNonExistingIDsReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding(999);
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testStringValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding('not-an-integer');
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testStringValuesContainingIntegersReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding('1-not-just-an-integer');
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testStringValuesContainingEncodedRouteKeysReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $encodedRouteKey = $user->getRouteKey();
+        $resolvedUser = $user->resolveRouteBinding("{$encodedRouteKey}-suffix-to-the-encoded-route-key");
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testArrayValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $encodedRouteKey = $user->getRouteKey();
+        $resolvedUser = $user->resolveRouteBinding([$encodedRouteKey]);
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testFloatValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding(12.3);
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testExistingIntegerValuesBelow256AreResolved()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+
+        $optimus = $this->mock(JenssegersOptimus::class);
+        $optimus->shouldReceive('decode')->with(123)->andReturn($user->id);
+        Optimus::shouldReceive('connection')->andReturn($optimus);
+
+        $resolvedUser = $user->resolveRouteBinding(123);
+
+        $this->assertTrue($user->is($resolvedUser));
     }
 
     /**
