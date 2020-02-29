@@ -25,7 +25,11 @@ trait OptimusEncodedRouteKey
      */
     public function resolveRouteBinding($value)
     {
-        if (is_string($value) && !ctype_digit($value)) {
+        if (is_string($value) && ctype_digit($value)) {
+            $value = (int)$value;
+        }
+
+        if (!is_int($value)) {
             return null;
         }
 

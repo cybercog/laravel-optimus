@@ -119,6 +119,23 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $this->assertNull($resolvedUser);
     }
 
+    public function testArrayValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $encodedRouteKey = $user->getRouteKey();
+        $resolvedUser = $user->resolveRouteBinding([$encodedRouteKey]);
+
+        $this->assertNull($resolvedUser);
+    }
+
+    public function testFloatValuesReturnNull()
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $resolvedUser = $user->resolveRouteBinding(12.3);
+
+        $this->assertNull($resolvedUser);
+    }
+
     public function testExistingIntegerValuesBelow256AreResolved()
     {
         $user = $this->createUserWithDefaultOptimusConnection();
