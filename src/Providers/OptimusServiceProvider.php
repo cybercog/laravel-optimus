@@ -85,7 +85,7 @@ class OptimusServiceProvider extends ServiceProvider
     protected function bindFactory()
     {
         $this->app->singleton('optimus.factory', function () {
-            return new OptimusFactory;
+            return new OptimusFactory();
         });
 
         $this->app->alias('optimus.factory', OptimusFactory::class);

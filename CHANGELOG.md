@@ -4,6 +4,12 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 ## [Unreleased]
 
+## [3.4.1] - 2020-02-29
+
+## Fixed
+
+- ([#22]) Handle string route values in `resolveRouteBinding` method
+
 ## [3.4.0] - 2019-09-04
 
 ### Added
@@ -63,7 +69,8 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 Initial release
 
-[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.4.0...master
+[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.4.1...master
+[3.4.1]: https://github.com/cybercog/laravel-optimus/compare/3.4.0...3.4.1
 [3.4.0]: https://github.com/cybercog/laravel-optimus/compare/3.3.0...3.4.0
 [3.3.0]: https://github.com/cybercog/laravel-optimus/compare/3.2.0...3.3.0
 [3.2.0]: https://github.com/cybercog/laravel-optimus/compare/3.1.0...3.2.0
@@ -72,6 +79,7 @@ Initial release
 [2.1.0]: https://github.com/cybercog/laravel-optimus/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/cybercog/laravel-optimus/compare/1.0.0...2.0.0
 
+[#22]: https://github.com/cybercog/laravel-optimus/pull/22
 [#20]: https://github.com/cybercog/laravel-optimus/pull/20
 [#15]: https://github.com/cybercog/laravel-optimus/pull/15
 [#14]: https://github.com/cybercog/laravel-optimus/pull/14
