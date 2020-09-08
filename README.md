@@ -3,6 +3,7 @@
 ![cog-laravel-optimus](https://user-images.githubusercontent.com/1849174/28744713-5b28fffa-746f-11e7-8ca2-0e2a612bc19c.png)
 
 <p align="center">
+<a href="https://discord.gg/R2sbjAt"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
 <a href="https://github.com/cybercog/laravel-optimus/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square" alt="Releases"></a>
 <a href="https://travis-ci.org/cybercog/laravel-optimus"><img src="https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://styleci.io/repos/77817858"><img src="https://styleci.io/repos/77817858/shield" alt="StyleCI"></a>
