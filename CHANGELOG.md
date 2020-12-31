@@ -4,6 +4,12 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 ## [Unreleased]
 
+## [3.6.0] - 2020-12-31
+
+### Added
+
+- ([#27]) PHP 8.x support
+
 ## [3.5.0] - 2020-09-09
 
 ### Added
@@ -81,7 +87,8 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 Initial release
 
-[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.5.0...master
+[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.6.0...master
+[3.6.0]: https://github.com/cybercog/laravel-optimus/compare/3.5.0...3.6.0
 [3.5.0]: https://github.com/cybercog/laravel-optimus/compare/3.4.2...3.5.0
 [3.4.2]: https://github.com/cybercog/laravel-optimus/compare/3.4.1...3.4.2
 [3.4.1]: https://github.com/cybercog/laravel-optimus/compare/3.4.0...3.4.1
@@ -93,6 +100,7 @@ Initial release
 [2.1.0]: https://github.com/cybercog/laravel-optimus/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/cybercog/laravel-optimus/compare/1.0.0...2.0.0
 
+[#27]: https://github.com/cybercog/laravel-optimus/pull/27
 [#25]: https://github.com/cybercog/laravel-optimus/pull/25
 [#23]: https://github.com/cybercog/laravel-optimus/pull/23
 [#22]: https://github.com/cybercog/laravel-optimus/pull/22
