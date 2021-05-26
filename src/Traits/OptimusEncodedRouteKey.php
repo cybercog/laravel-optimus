@@ -33,7 +33,7 @@ trait OptimusEncodedRouteKey
             $value = $this->getOptimus()->decode($value);
         }
 
-        return $this->where($field ?? $this->getRouteKeyName(),$value)->first();
+        return $this->where($field ?? $this->getRouteKeyName(), $value)->first();
     }
 
     /**
