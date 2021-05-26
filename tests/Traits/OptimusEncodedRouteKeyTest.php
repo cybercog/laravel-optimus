@@ -64,7 +64,7 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
     {
         $user = $this->createUserWithDefaultOptimusConnection();
         $email = $user->email;
-        $resolvedUser = $user->resolveRouteBinding($email,'email');
+        $resolvedUser = $user->resolveRouteBinding($email, 'email');
 
         $this->assertEquals($user->id, $resolvedUser->id);
     }
