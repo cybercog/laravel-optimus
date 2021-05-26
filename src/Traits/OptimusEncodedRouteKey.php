@@ -29,7 +29,7 @@ trait OptimusEncodedRouteKey
             $value = (int) $value;
         }
 
-        if (is_int($value) && is_null($field)){
+        if (is_int($value) && is_null($field)) {
             $value = $this->getOptimus()->decode($value);
         }
 
