@@ -69,6 +69,15 @@ class OptimusEncodedRouteKeyTest extends AbstractTestCase
         $this->assertEquals($user->id, $resolvedUser->id);
     }
 
+    public function testResolveModelWithEncodedKeyWithCustomIdKey(): void
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $encodedId = $user->getRouteKey();
+        $resolvedUser = $user->resolveRouteBinding($encodedId, 'id');
+
+        $this->assertSame($user->id, $resolvedUser->id);
+    }
+
     public function testEncodedKeyIsUsedForRouteModelBinding(): void
     {
         $user = $this->createUserWithDefaultOptimusConnection();

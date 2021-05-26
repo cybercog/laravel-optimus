@@ -25,15 +25,19 @@ trait OptimusEncodedRouteKey
      */
     public function resolveRouteBinding($value, $field = null)
     {
+        if ($field === null) {
+            $field = $this->getRouteKeyName();
+        }
+
         if (is_string($value) && ctype_digit($value)) {
             $value = (int) $value;
         }
 
-        if (is_int($value) && is_null($field)) {
+        if (is_int($value) && $field === $this->getRouteKeyName()) {
             $value = $this->getOptimus()->decode($value);
         }
 
-        return $this->where($field ?? $this->getRouteKeyName(), $value)->first();
+        return $this->where($field, $value)->first();
     }
 
     /**
