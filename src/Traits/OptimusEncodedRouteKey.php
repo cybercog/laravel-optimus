@@ -29,13 +29,11 @@ trait OptimusEncodedRouteKey
             $value = (int) $value;
         }
 
-        if (!is_int($value)) {
-            return null;
+        if (is_int($value) && is_null($field)) {
+            $value = $this->getOptimus()->decode($value);
         }
 
-        $id = $this->getOptimus()->decode($value);
-
-        return $this->where($this->getRouteKeyName(), '=', $id)->first();
+        return $this->where($field ?? $this->getRouteKeyName(), $value)->first();
     }
 
     /**
