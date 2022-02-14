@@ -271,9 +271,9 @@ This package is a wrapper for [Optimus Library](https://github.com/jenssegers/op
 
 - `Laravel Optimus` package is open-sourced software licensed under the [MIT license](LICENSE) by [Anton Komarev].
 
-## 🌟 Stargazers over time
+## ⭐ Stargazers over time
 
-[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/MDEwOlJlcG9zaXRvcnk3NzgxNzg1OA==.svg)](https://yhype.me?ref=github-cybercog-laravel-optimus)
+[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/MDEwOlJlcG9zaXRvcnk3NzgxNzg1OA==.svg)](https://yhype.me?ref=github-repository-star-cumulative-cybercog-laravel-optimus)
 
 ## About CyberCog
 
