@@ -5,7 +5,7 @@ namespace Cog\Tests\Laravel\Optimus\Stubs\Models;
 use Cog\Laravel\Optimus\Traits\OptimusEncodedRouteKey;
 use Illuminate\Database\Eloquent\Model;
 
-class UserWithCustomOptimusConnection extends Model
+final class UserWithCustomOptimusConnection extends Model
 {
     use OptimusEncodedRouteKey;
 

@@ -21,7 +21,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
 use Jenssegers\Optimus\Optimus as JenssegersOptimus;
 
-class OptimusEncodedRouteKeyTest extends AbstractTestCase
+final class OptimusEncodedRouteKeyTest extends AbstractTestCase
 {
     protected function setUp(): void
     {

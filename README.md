@@ -5,7 +5,7 @@
 <p align="center">
 <a href="https://discord.gg/R2sbjAt"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
 <a href="https://github.com/cybercog/laravel-optimus/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-optimus.svg?style=flat-square" alt="Releases"></a>
-<a href="https://travis-ci.org/cybercog/laravel-optimus"><img src="https://img.shields.io/travis/cybercog/laravel-optimus/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://github.com/cybercog/laravel-optimus/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/cybercog/laravel-optimus/tests.yml?style=flat-square" alt="Build"></a>
 <a href="https://styleci.io/repos/77817858"><img src="https://styleci.io/repos/77817858/shield" alt="StyleCI"></a>
 <a href="https://scrutinizer-ci.com/g/cybercog/laravel-optimus/?branch=master"><img src="https://img.shields.io/scrutinizer/g/cybercog/laravel-optimus.svg?style=flat-square" alt="Code Quality"></a>
 <a href="https://github.com/cybercog/laravel-optimus/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/laravel-optimus.svg?style=flat-square" alt="License"></a>
@@ -48,8 +48,8 @@ Laravel wrapper for the [Optimus Library](https://github.com/jenssegers/optimus)
 
 First, pull in the package through Composer.
 
-```shell script
-$ composer require cybercog/laravel-optimus
+```shell
+composer require cybercog/laravel-optimus
 ```
 
 #### Register Package Manually (optional)
@@ -76,8 +76,8 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 
 Laravel Optimus requires connection configuration. To get started, you'll need to publish config file:
 
-```shell script
-$ php artisan vendor:publish --provider="Cog\Laravel\Optimus\Providers\OptimusServiceProvider" --tag="config"
+```shell
+php artisan vendor:publish --provider="Cog\Laravel\Optimus\Providers\OptimusServiceProvider" --tag="config"
 ```
 
 This will create a `config/optimus.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -100,8 +100,8 @@ To get started you will need 3 keys in main connection;
 
 Luckily for you, there is console command that can do all of this for you, just run the following command:
 
-```shell script
-$ php vendor/bin/optimus spark
+```shell
+php vendor/bin/optimus spark
 ```
 
 Copy-paste generated integers to your connection config.
@@ -241,8 +241,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Run the tests with:
 
-```shell script
-$ vendor/bin/phpunit
+```shell
+vendor/bin/phpunit
 ```
 
 ## Security
