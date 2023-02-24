@@ -18,7 +18,7 @@ use Cog\Laravel\Optimus\OptimusManager;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
-class OptimusTest extends AbstractTestCase
+final class OptimusTest extends AbstractTestCase
 {
     use FacadeTrait;
 

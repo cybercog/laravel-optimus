@@ -16,7 +16,7 @@ namespace Cog\Tests\Laravel\Optimus;
 use Cog\Laravel\Optimus\OptimusFactory;
 use Jenssegers\Optimus\Optimus;
 
-class OptimusFactoryTest extends AbstractTestCase
+final class OptimusFactoryTest extends AbstractTestCase
 {
     public function testMakeStandard(): void
     {

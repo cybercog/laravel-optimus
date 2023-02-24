@@ -20,7 +20,7 @@ use Illuminate\Contracts\Config\Repository;
 use Jenssegers\Optimus\Optimus;
 use Mockery;
 
-class OptimusManagerTest extends AbstractTestBenchTestCase
+final class OptimusManagerTest extends AbstractTestBenchTestCase
 {
     public function testCreateConnection(): void
     {

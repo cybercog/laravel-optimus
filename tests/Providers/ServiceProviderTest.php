@@ -11,14 +11,15 @@
 
 declare(strict_types=1);
 
-namespace Cog\Tests\Laravel\Optimus;
+namespace Cog\Tests\Laravel\Optimus\Providers;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
+use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 use Jenssegers\Optimus\Optimus;
 
-class ServiceProviderTest extends AbstractTestCase
+final class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
 
