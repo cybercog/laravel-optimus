@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\Optimus;
 
-use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use Jenssegers\Optimus\Optimus;
 
