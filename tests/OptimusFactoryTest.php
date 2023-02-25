@@ -23,9 +23,9 @@ final class OptimusFactoryTest extends AbstractTestCase
         $factory = $this->getOptimusFactory();
 
         $return = $factory->make([
-            'prime' => 'your-prime-integer',
-            'inverse' => 'your-inverse-integer',
-            'random' => 'your-random-integer',
+            'prime' => 0,
+            'inverse' => 0,
+            'random' => 0,
         ]);
 
         $this->assertInstanceOf(Optimus::class, $return);

@@ -35,20 +35,25 @@ return [
     | configuration has been included, but you may add as many connections as
     | you would like.
     |
+    | Laravel Optimus depends on jenssegers/optimus, we need three values:
+    | - A large `prime` number lower than 2147483647
+    | - The `inverse` prime so that (PRIME * INVERSE) & MAXID == 1
+    | - A large `random` integer lower than 2147483647
+    |
     */
 
     'connections' => [
 
         'main' => [
-            'prime' => 'your-prime-integer',
-            'inverse' => 'your-inverse-integer',
-            'random' => 'your-random-integer',
+            'prime' => 0, // 'your-prime-integer'
+            'inverse' => 0, //'your-inverse-integer'
+            'random' => 0, //'your-random-integer'
         ],
 
         'alternative' => [
-            'prime' => 'your-prime-integer',
-            'inverse' => 'your-inverse-integer',
-            'random' => 'your-random-integer',
+            'prime' => 0, // 'your-prime-integer',
+            'inverse' => 0, // 'your-inverse-integer',
+            'random' => 0, // 'your-random-integer',
         ],
 
     ],
