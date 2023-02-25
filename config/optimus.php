@@ -45,15 +45,15 @@ return [
     'connections' => [
 
         'main' => [
-            'prime' => 0, // 'your-prime-integer'
-            'inverse' => 0, //'your-inverse-integer'
-            'random' => 0, //'your-random-integer'
+            'prime' => 'your-prime-integer',
+            'inverse' => 'your-inverse-integer',
+            'random' => 'your-random-integer',
         ],
 
         'alternative' => [
-            'prime' => 0, // 'your-prime-integer',
-            'inverse' => 0, // 'your-inverse-integer',
-            'random' => 0, // 'your-random-integer',
+            'prime' => 'your-prime-integer',
+            'inverse' => 'your-inverse-integer',
+            'random' => 'your-random-integer',
         ],
 
     ],
