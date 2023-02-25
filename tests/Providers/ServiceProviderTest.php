@@ -35,6 +35,11 @@ final class ServiceProviderTest extends AbstractTestCase
 
     public function testBindings(): void
     {
+        $appConfig = $this->app->get('config');
+        $appConfig->set('optimus.connections.main.prime', 0);
+        $appConfig->set('optimus.connections.main.inverse', 0);
+        $appConfig->set('optimus.connections.main.random', 0);
+
         $this->assertIsInjectable(Optimus::class);
 
         $original = $this->app['optimus.connection'];
