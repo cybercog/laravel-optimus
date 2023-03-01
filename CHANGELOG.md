@@ -8,6 +8,18 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 - ([#35]) Added Laravel 10 support
 
+### Removed
+
+- ([#35]) Dropped Laravel 5.5 support
+- ([#35]) Dropped Laravel 5.6 support
+- ([#35]) Dropped Laravel 5.7 support
+- ([#35]) Dropped Laravel 5.8 support
+- ([#35]) Dropped Laravel 6 support
+- ([#35]) Dropped Laravel 7 support
+- ([#35]) Dropped PHP 7.1 support
+- ([#35]) Dropped PHP 7.2 support
+- ([#35]) Dropped PHP 7.3 support
+
 ## [3.8.0] - 2022-02-11
 
 ### Added
