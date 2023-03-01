@@ -40,7 +40,7 @@ final class OptimusManagerTest extends AbstractTestBenchTestCase
         $this->assertArrayHasKey('optimus', $manager->getConnections());
     }
 
-    protected function getManager(array $config)
+    protected function getManager(array $config): OptimusManager
     {
         $repository = Mockery::mock(Repository::class);
         $factory = Mockery::mock(OptimusFactory::class);

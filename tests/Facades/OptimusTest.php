@@ -22,32 +22,17 @@ final class OptimusTest extends AbstractTestCase
 {
     use FacadeTrait;
 
-    /**
-     * Get the facade accessor.
-     *
-     * @return string
-     */
-    protected function getFacadeAccessor(): string
+    protected static function getFacadeAccessor(): string
     {
         return 'optimus';
     }
 
-    /**
-     * Get the facade class.
-     *
-     * @return string
-     */
-    protected function getFacadeClass(): string
+    protected static function getFacadeClass(): string
     {
         return Optimus::class;
     }
 
-    /**
-     * Get the facade root.
-     *
-     * @return string
-     */
-    protected function getFacadeRoot(): string
+    protected static function getFacadeRoot(): string
     {
         return OptimusManager::class;
     }
