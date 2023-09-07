@@ -28,6 +28,7 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
         parent::setUp();
 
         $this->loadLaravelMigrations(config('database.default'));
+        $this->loadMigrationsFrom(__DIR__.'/../Stubs/Migrations');
         $this->configurePrimeNumbers();
     }
 
@@ -49,6 +50,18 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
 
         $this->assertEquals($correctEncodedId, $routeKey);
         $this->assertNotEquals($incorrectEncodedId, $routeKey);
+    }
+
+    public function testResolveChildRouteWithEncodedKey(): void
+    {
+        $user = $this->createUserWithDefaultOptimusConnection();
+        $nestedUser = $this->createUserWithDefaultOptimusConnection([
+            'email' => 'test1@user.com'
+        ]);
+        $nestedUser->parentUser()->associate($user)->save();
+        $resolvedNestedUser = $user->resolveChildRouteBinding('nested_user', $nestedUser->getRouteKey(), 'id');
+
+        $this->assertEquals($nestedUser->id, $resolvedNestedUser->id);
     }
 
     public function testResolveModelWithEncodedKey(): void
@@ -172,13 +185,13 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
      *
      * @return \Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithDefaultOptimusConnection
      */
-    protected function createUserWithDefaultOptimusConnection(): UserWithDefaultOptimusConnection
+    protected function createUserWithDefaultOptimusConnection(array $data = []): UserWithDefaultOptimusConnection
     {
-        return UserWithDefaultOptimusConnection::create([
+        return UserWithDefaultOptimusConnection::create(array_merge([
             'name' => 'Default Test User',
             'email' => 'test@user.com',
             'password' => 'p4ssw0rd',
-        ]);
+        ], $data));
     }
 
     /**
