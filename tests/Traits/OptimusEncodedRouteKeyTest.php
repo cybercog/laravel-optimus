@@ -56,7 +56,7 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
     {
         $user = $this->createUserWithDefaultOptimusConnection();
         $nestedUser = $this->createUserWithDefaultOptimusConnection([
-            'email' => 'test1@user.com'
+            'email' => 'test1@user.com',
         ]);
         $nestedUser->parentUser()->associate($user)->save();
         $resolvedNestedUser = $user->resolveChildRouteBinding('nested_user', $nestedUser->getRouteKey(), 'id');

@@ -17,7 +17,6 @@ final class UserWithCustomOptimusConnection extends Model
 
     protected $guarded = [];
 
-
     public function nestedUsers(): HasMany
     {
         return $this->hasMany(UserWithCustomOptimusConnection::class, 'parent_id');
