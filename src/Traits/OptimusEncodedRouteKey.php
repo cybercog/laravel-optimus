@@ -41,6 +41,31 @@ trait OptimusEncodedRouteKey
     }
 
     /**
+     * Retrieve the model for a bound value.
+     *
+     * @param  \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Relations\Relation  $query
+     * @param  mixed  $value
+     * @param  string|null  $field
+     * @return \Illuminate\Database\Eloquent\Relations\Relation
+     */
+    public function resolveRouteBindingQuery($query, $value, $field = null)
+    {
+        if ($field === null) {
+            $field = $query->getRouteKeyName();
+        }
+
+        if (is_string($value) && ctype_digit($value)) {
+            $value = (int) $value;
+        }
+
+        if (is_int($value) && $field === $this->getRouteKeyName()) {
+            $value = $this->getOptimus()->decode($value);
+        }
+
+        return $query->where($field, $value);
+    }
+
+    /**
      * Get the Optimus instance.
      *
      * @return \Cog\Laravel\Optimus\OptimusManager
