@@ -17,6 +17,8 @@ return new class extends Migration
 
     public function down(): void
     {
-        throw new \Exception('Migration is irreversible');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['parent_id']);
+        });
     }
 };
