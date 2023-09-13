@@ -21,20 +21,13 @@ class OptimusManager extends AbstractManager
 {
     /**
      * The factory instance.
-     *
-     * @var \Cog\Laravel\Optimus\OptimusFactory
      */
-    private $factory;
+    private OptimusFactory $factory;
 
-    /**
-     * Create a new Optimus manager instance.
-     *
-     * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Cog\Laravel\Optimus\OptimusFactory $factory
-     * @return void
-     */
-    public function __construct(Repository $config, OptimusFactory $factory)
-    {
+    public function __construct(
+        Repository $config,
+        OptimusFactory $factory
+    ) {
         parent::__construct($config);
 
         $this->factory = $factory;
@@ -53,8 +46,6 @@ class OptimusManager extends AbstractManager
 
     /**
      * Get the configuration name.
-     *
-     * @return string
      */
     protected function getConfigName(): string
     {
@@ -63,8 +54,6 @@ class OptimusManager extends AbstractManager
 
     /**
      * Get the factory instance.
-     *
-     * @return \Cog\Laravel\Optimus\OptimusFactory
      */
     public function getFactory(): OptimusFactory
     {

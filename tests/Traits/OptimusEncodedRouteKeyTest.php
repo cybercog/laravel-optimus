@@ -182,8 +182,6 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
 
     /**
      * Create a test user with default Optimus connection in the database.
-     *
-     * @return \Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithDefaultOptimusConnection
      */
     protected function createUserWithDefaultOptimusConnection(array $attributes = []): UserWithDefaultOptimusConnection
     {
@@ -196,8 +194,6 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
 
     /**
      * Create a test user with custom Optimus connection in the database.
-     *
-     * @return \Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithCustomOptimusConnection
      */
     protected function createUserWithCustomOptimusConnection(): UserWithCustomOptimusConnection
     {
@@ -210,8 +206,6 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
 
     /**
      * Configure some random prime numbers.
-     *
-     * @return void
      */
     protected function configurePrimeNumbers(): void
     {

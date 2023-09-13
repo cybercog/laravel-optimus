@@ -33,6 +33,6 @@ final class OptimusFactoryTest extends AbstractTestCase
 
     protected function getOptimusFactory(): OptimusFactory
     {
-        return new OptimusFactory;
+        return new OptimusFactory();
     }
 }

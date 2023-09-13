@@ -25,20 +25,16 @@ class OptimusServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->setupConfig();
     }
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->bindFactory();
         $this->bindManager();
@@ -47,8 +43,6 @@ class OptimusServiceProvider extends ServiceProvider
 
     /**
      * Get the services provided by the provider.
-     *
-     * @return string[]
      */
     public function provides(): array
     {
@@ -61,10 +55,8 @@ class OptimusServiceProvider extends ServiceProvider
 
     /**
      * Setup the config.
-     *
-     * @return void
      */
-    protected function setupConfig()
+    protected function setupConfig(): void
     {
         $source = realpath(__DIR__ . '/../../config/optimus.php');
 
@@ -79,10 +71,8 @@ class OptimusServiceProvider extends ServiceProvider
 
     /**
      * Register the factory class.
-     *
-     * @return void
      */
-    protected function bindFactory()
+    protected function bindFactory(): void
     {
         $this->app->singleton('optimus.factory', function () {
             return new OptimusFactory();
@@ -93,10 +83,8 @@ class OptimusServiceProvider extends ServiceProvider
 
     /**
      * Register the manager class.
-     *
-     * @return void
      */
-    protected function bindManager()
+    protected function bindManager(): void
     {
         $this->app->singleton('optimus', function (Container $app) {
             $config = $app['config'];
@@ -110,10 +98,8 @@ class OptimusServiceProvider extends ServiceProvider
 
     /**
      * Register the bindings.
-     *
-     * @return void
      */
-    protected function bindOptimus()
+    protected function bindOptimus(): void
     {
         $this->app->bind('optimus.connection', function (Container $app) {
             $manager = $app['optimus'];

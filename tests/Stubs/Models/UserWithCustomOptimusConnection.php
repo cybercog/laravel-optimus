@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Optimus.
+ *
+ * (c) Anton Komarev <anton@komarev.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Cog\Tests\Laravel\Optimus\Stubs\Models;
 
 use Cog\Laravel\Optimus\Traits\OptimusEncodedRouteKey;
@@ -11,7 +20,7 @@ final class UserWithCustomOptimusConnection extends Model
 {
     use OptimusEncodedRouteKey;
 
-    protected $optimusConnection = 'custom';
+    protected string $optimusConnection = 'custom';
 
     protected $table = 'users';
 
