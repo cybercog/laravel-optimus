@@ -24,6 +24,6 @@ final class UserWithCustomOptimusConnection extends Model
 
     public function parentUser(): BelongsTo
     {
-        return$this->belongsTo(UserWithCustomOptimusConnection::class, 'parent_id');
+        return $this->belongsTo(UserWithCustomOptimusConnection::class, 'parent_id');
     }
 }

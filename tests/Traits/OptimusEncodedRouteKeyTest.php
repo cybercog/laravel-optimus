@@ -28,7 +28,7 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
         parent::setUp();
 
         $this->loadLaravelMigrations(config('database.default'));
-        $this->loadMigrationsFrom(__DIR__.'/../Stubs/Migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->configurePrimeNumbers();
     }
 
@@ -185,13 +185,13 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
      *
      * @return \Cog\Tests\Laravel\Optimus\Stubs\Models\UserWithDefaultOptimusConnection
      */
-    protected function createUserWithDefaultOptimusConnection(array $data = []): UserWithDefaultOptimusConnection
+    protected function createUserWithDefaultOptimusConnection(array $attributes = []): UserWithDefaultOptimusConnection
     {
         return UserWithDefaultOptimusConnection::create(array_merge([
             'name' => 'Default Test User',
             'email' => 'test@user.com',
             'password' => 'p4ssw0rd',
-        ], $data));
+        ], $attributes));
     }
 
     /**
