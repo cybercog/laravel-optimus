@@ -36,14 +36,14 @@
     "require": {
         "php": "^7.4|^8.0",
         "graham-campbell/manager": "^5.0",
-        "illuminate/contracts": "^8.0|^9.0|^10.0",
-        "illuminate/support": "^8.0|^9.0|^10.0",
-        "jenssegers/optimus": "^0.2.2"
+        "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "jenssegers/optimus": "^0.2.2|^1.1"
     },
     "require-dev": {
         "graham-campbell/testbench": "^6.0",
         "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^9.6"
+        "phpunit/phpunit": "^9.6|^10.5"
     },
     "autoload": {
         "psr-4": {
@@ -72,5 +72,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable" : true
+    "prefer-stable": true
 }
