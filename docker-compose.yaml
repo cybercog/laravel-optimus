@@ -1,35 +1,34 @@
 version: "3.9"
 services:
-  app:
-    container_name: laravel-optimus-app
-    image: laravel-optimus-app
+  php81:
+    container_name: laravel-optimus-lib-81
+    image: laravel-optimus-lib-81
     build:
       context: ./
-      dockerfile: ./.docker/php/Dockerfile
-    restart: unless-stopped
+      dockerfile: ./.docker/php/php81/Dockerfile
+    tty: true
     working_dir: /app
     volumes:
       - ./:/app
-      - ./.docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
-    networks:
-      - laravel-optimus
 
-  nginx:
-    container_name: laravel-optimus-nginx
-    image: nginx:1.21-alpine
-    restart: unless-stopped
-    depends_on:
-      - app
-    ports:
-      - "80:80"
-    environment:
-      VIRTUAL_HOST: app.laravel-optimus.localhost
+  php82:
+    container_name: laravel-optimus-lib-82
+    image: laravel-optimus-lib-82
+    build:
+      context: ./
+      dockerfile: ./.docker/php/php82/Dockerfile
+    tty: true
+    working_dir: /app
     volumes:
-      - ./.docker/nginx/app.laravel-optimus.80.conf:/etc/nginx/conf.d/app.laravel-optimus.80.conf:ro
-      - ./public:/app/public:ro
-    networks:
-      - laravel-optimus
+      - ./:/app
 
-networks:
-  laravel-optimus:
-    driver: bridge
+  php83:
+    container_name: laravel-optimus-lib-83
+    image: laravel-optimus-lib-83
+    build:
+      context: ./
+      dockerfile: ./.docker/php/php83/Dockerfile
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app

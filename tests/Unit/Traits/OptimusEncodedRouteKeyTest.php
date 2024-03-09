@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Tests\Laravel\Optimus\Traits;
+namespace Cog\Tests\Laravel\Optimus\Unit\Traits;
 
 use Cog\Laravel\Optimus\Facades\Optimus;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
@@ -28,7 +28,7 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
         parent::setUp();
 
         $this->loadLaravelMigrations(config('database.default'));
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
         $this->configurePrimeNumbers();
     }
 

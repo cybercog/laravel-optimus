@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Tests\Laravel\Optimus\Providers;
+namespace Cog\Tests\Laravel\Optimus\Unit\Providers;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
