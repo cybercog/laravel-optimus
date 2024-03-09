@@ -28,7 +28,7 @@ final class OptimusEncodedRouteKeyTest extends AbstractTestCase
         parent::setUp();
 
         $this->loadLaravelMigrations(config('database.default'));
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
         $this->configurePrimeNumbers();
     }
 
