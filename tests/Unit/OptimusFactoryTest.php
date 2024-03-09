@@ -11,9 +11,10 @@
 
 declare(strict_types=1);
 
-namespace Cog\Tests\Laravel\Optimus;
+namespace Cog\Tests\Laravel\Optimus\Unit;
 
 use Cog\Laravel\Optimus\OptimusFactory;
+use Cog\Tests\Laravel\Optimus\AbstractTestCase;
 use Jenssegers\Optimus\Optimus;
 
 final class OptimusFactoryTest extends AbstractTestCase

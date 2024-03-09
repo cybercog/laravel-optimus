@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\Tests\Laravel\Optimus\Facades;
+namespace Cog\Tests\Laravel\Optimus\Unit\Facades;
 
 use Cog\Laravel\Optimus\Facades\Optimus;
 use Cog\Laravel\Optimus\OptimusManager;
