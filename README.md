@@ -273,8 +273,7 @@ This package is a wrapper for [Optimus Library](https://github.com/jenssegers/op
 
 ## 🌟 Stargazers over time
 
-[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/MDEwOlJlcG9zaXRvcnk3NzgxNzg1OA==.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-laravel-optimus&utm_content=chart-repository-star-cumulative)
-
+[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/77817858.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-laravel-optimus&utm_content=chart-repository-star-cumulative)
 ## About CyberCog
 
 [CyberCog](https://cybercog.su) is a Social Unity of enthusiasts. Research the best solutions in product & software development is our passion.
