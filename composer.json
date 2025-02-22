@@ -43,7 +43,7 @@
     "require-dev": {
         "graham-campbell/testbench": "^6.0",
         "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^9.6|^10.5"
+        "phpunit/phpunit": "^9.6|^10.5|^11.5.3"
     },
     "autoload": {
         "psr-4": {
