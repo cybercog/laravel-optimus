@@ -4,6 +4,13 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 ## [Unreleased]
 
+## [3.12.0] - 2025-02-22
+
+### Added
+
+- ([#43]) Added Laravel 12 support
+- ([#44]) Added PHP 8.4 tests
+
 ## [3.11.0] - 2024-03-09
 
 ### Added
@@ -130,7 +137,8 @@ All notable changes to `cybercog/laravel-optimus` will be documented in this fil
 
 Initial release
 
-[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.11.0...master
+[Unreleased]: https://github.com/cybercog/laravel-optimus/compare/3.12.0...master
+[3.12.0]: https://github.com/cybercog/laravel-optimus/compare/3.11.0...3.12.0
 [3.11.0]: https://github.com/cybercog/laravel-optimus/compare/3.10.0...3.11.0
 [3.10.0]: https://github.com/cybercog/laravel-optimus/compare/3.9.0...3.10.0
 [3.9.0]: https://github.com/cybercog/laravel-optimus/compare/3.8.0...3.9.0
@@ -148,6 +156,8 @@ Initial release
 [2.1.0]: https://github.com/cybercog/laravel-optimus/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/cybercog/laravel-optimus/compare/1.0.0...2.0.0
 
+[#44]: https://github.com/cybercog/laravel-optimus/pull/44
+[#43]: https://github.com/cybercog/laravel-optimus/pull/43
 [#41]: https://github.com/cybercog/laravel-optimus/pull/41
 [#38]: https://github.com/cybercog/laravel-optimus/pull/38
 [#35]: https://github.com/cybercog/laravel-optimus/pull/35
