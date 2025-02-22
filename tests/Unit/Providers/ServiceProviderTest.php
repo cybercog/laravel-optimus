@@ -35,6 +35,8 @@ final class ServiceProviderTest extends AbstractTestCase
 
     public function testBindings(): void
     {
+        $this->configurePrimeNumbers();
+
         $this->assertIsInjectable(Optimus::class);
 
         $original = $this->app['optimus.connection'];
@@ -43,5 +45,21 @@ final class ServiceProviderTest extends AbstractTestCase
 
         $this->assertNotSame($original, $new);
         $this->assertEquals($original, $new);
+    }
+
+    protected function configurePrimeNumbers(): void
+    {
+        config()->set('optimus.connections', [
+            'main' => [
+                'prime' => 1490261603,
+                'inverse' => 1573362507,
+                'random' => 1369544188,
+            ],
+            'custom' => [
+                'prime' => 1770719809,
+                'inverse' => 1417283009,
+                'random' => 508877541,
+            ],
+        ]);
     }
 }
