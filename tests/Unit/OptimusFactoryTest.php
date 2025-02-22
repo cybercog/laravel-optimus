@@ -21,12 +21,19 @@ final class OptimusFactoryTest extends AbstractTestCase
 {
     public function testMakeStandard(): void
     {
-        $instance = (new OptimusFactory())->make([
-            'prime' => 0,
-            'inverse' => 1,
-            'random' => 2,
+        $factory = $this->getOptimusFactory();
+
+        $return = $factory->make([
+            'prime' => 'your-prime-integer',
+            'inverse' => 'your-inverse-integer',
+            'random' => 'your-random-integer',
         ]);
 
-        $this->assertInstanceOf(Optimus::class, $instance);
+        $this->assertInstanceOf(Optimus::class, $return);
+    }
+
+    protected function getOptimusFactory(): OptimusFactory
+    {
+        return new OptimusFactory();
     }
 }
