@@ -16,24 +16,25 @@ namespace Cog\Tests\Laravel\Optimus\Unit\Facades;
 use Cog\Laravel\Optimus\Facades\Optimus;
 use Cog\Laravel\Optimus\OptimusManager;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
-use GrahamCampbell\TestBenchCore\FacadeTrait;
+use Illuminate\Support\Facades\Facade;
+use ReflectionMethod;
 
 final class OptimusTest extends AbstractTestCase
 {
-    use FacadeTrait;
-
-    protected static function getFacadeAccessor(): string
+    public function testIsAFacade(): void
     {
-        return 'optimus';
+        $this->assertTrue(is_subclass_of(Optimus::class, Facade::class));
     }
 
-    protected static function getFacadeClass(): string
+    public function testFacadeAccessor(): void
     {
-        return Optimus::class;
+        $method = new ReflectionMethod(Optimus::class, 'getFacadeAccessor');
+
+        $this->assertSame('optimus', $method->invoke(null));
     }
 
-    protected static function getFacadeRoot(): string
+    public function testFacadeRoot(): void
     {
-        return OptimusManager::class;
+        $this->assertInstanceOf(OptimusManager::class, Optimus::getFacadeRoot());
     }
 }

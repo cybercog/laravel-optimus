@@ -15,13 +15,20 @@ namespace Cog\Tests\Laravel\Optimus\Unit;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
-use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Illuminate\Contracts\Config\Repository;
 use Jenssegers\Optimus\Optimus;
 use Mockery;
+use PHPUnit\Framework\TestCase;
 
-final class OptimusManagerTest extends AbstractTestBenchTestCase
+final class OptimusManagerTest extends TestCase
 {
+    protected function tearDown(): void
+    {
+        Mockery::close();
+
+        parent::tearDown();
+    }
+
     public function testCreateConnection(): void
     {
         $config = ['path' => __DIR__];

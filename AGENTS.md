@@ -4,7 +4,7 @@ This file provides guidance to LLM Agents when working with code in this reposit
 
 ## Project Overview
 
-Laravel Optimus is a PHP package (`cybercog/laravel-optimus`) — a Laravel bridge for [jenssegers/optimus](https://github.com/jenssegers/optimus). Provides ID obfuscation based on Knuth's multiplicative hashing method, transforming integer IDs into obfuscated integers. Supports multiple named connections. Compatible with Laravel 8-12 and PHP 7.4-8.5.
+Laravel Optimus is a PHP package (`cybercog/laravel-optimus`) — a Laravel bridge for [jenssegers/optimus](https://github.com/jenssegers/optimus). Provides ID obfuscation based on Knuth's multiplicative hashing method, transforming integer IDs into obfuscated integers. Supports multiple named connections. Compatible with Laravel 8-13 and PHP 7.4-8.5.
 
 ## Commands
 

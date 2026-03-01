@@ -14,14 +14,16 @@ declare(strict_types=1);
 namespace Cog\Tests\Laravel\Optimus;
 
 use Cog\Laravel\Optimus\Providers\OptimusServiceProvider;
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Orchestra\Testbench\TestCase;
 
-abstract class AbstractTestCase extends AbstractPackageTestCase
+abstract class AbstractTestCase extends TestCase
 {
     public static $latestResponse;
 
-    protected static function getServiceProviderClass(): string
+    protected function getPackageProviders($app): array
     {
-        return OptimusServiceProvider::class;
+        return [
+            OptimusServiceProvider::class,
+        ];
     }
 }
