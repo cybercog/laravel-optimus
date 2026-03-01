@@ -18,6 +18,8 @@ use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
+    public static $latestResponse;
+
     protected static function getServiceProviderClass(): string
     {
         return OptimusServiceProvider::class;
