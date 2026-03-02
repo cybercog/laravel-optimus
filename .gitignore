@@ -1,3 +1,4 @@
+.claude/
 .idea/
 vendor/
 .phpunit.result.cache

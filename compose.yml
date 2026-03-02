@@ -1,10 +1,11 @@
 services:
   php81:
     container_name: laravel-optimus-lib-81
-    image: laravel-optimus-lib-81
     build:
       context: ./
-      dockerfile: ./.docker/php81.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.1"
     tty: true
     working_dir: /app
     volumes:
@@ -12,10 +13,11 @@ services:
 
   php82:
     container_name: laravel-optimus-lib-82
-    image: laravel-optimus-lib-82
     build:
       context: ./
-      dockerfile: ./.docker/php82.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.2"
     tty: true
     working_dir: /app
     volumes:
@@ -23,10 +25,11 @@ services:
 
   php83:
     container_name: laravel-optimus-lib-83
-    image: laravel-optimus-lib-83
     build:
       context: ./
-      dockerfile: ./.docker/php83.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.3"
     tty: true
     working_dir: /app
     volumes:
@@ -34,10 +37,11 @@ services:
 
   php84:
     container_name: laravel-optimus-lib-84
-    image: laravel-optimus-lib-84
     build:
       context: ./
-      dockerfile: ./.docker/php84.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.4"
     tty: true
     working_dir: /app
     volumes:
@@ -45,10 +49,11 @@ services:
 
   php85:
     container_name: laravel-optimus-lib-85
-    image: laravel-optimus-lib-85
     build:
       context: ./
-      dockerfile: ./.docker/php85.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.5"
     tty: true
     working_dir: /app
     volumes:
