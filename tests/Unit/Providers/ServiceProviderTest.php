@@ -15,27 +15,38 @@ namespace Cog\Tests\Laravel\Optimus\Unit\Providers;
 
 use Cog\Laravel\Optimus\OptimusFactory;
 use Cog\Laravel\Optimus\OptimusManager;
+use Cog\Laravel\Optimus\Providers\OptimusServiceProvider;
 use Cog\Tests\Laravel\Optimus\AbstractTestCase;
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Illuminate\Support\ServiceProvider;
 use Jenssegers\Optimus\Optimus;
 
 final class ServiceProviderTest extends AbstractTestCase
 {
-    use ServiceProviderTrait;
+    public function testIsAServiceProvider(): void
+    {
+        $this->assertTrue(is_subclass_of(OptimusServiceProvider::class, ServiceProvider::class));
+    }
+
+    public function testProvides(): void
+    {
+        $provider = new OptimusServiceProvider($this->app);
+
+        $this->assertIsArray($provider->provides());
+    }
 
     public function testOptimusFactoryIsInjectable(): void
     {
-        $this->assertIsInjectable(OptimusFactory::class);
+        $this->assertInstanceOf(OptimusFactory::class, $this->app->make(OptimusFactory::class));
     }
 
     public function testOptimusManagerIsInjectable(): void
     {
-        $this->assertIsInjectable(OptimusManager::class);
+        $this->assertInstanceOf(OptimusManager::class, $this->app->make(OptimusManager::class));
     }
 
     public function testBindings(): void
     {
-        $this->assertIsInjectable(Optimus::class);
+        $this->assertInstanceOf(Optimus::class, $this->app->make(Optimus::class));
 
         $original = $this->app['optimus.connection'];
         $this->app['optimus']->reconnect();
