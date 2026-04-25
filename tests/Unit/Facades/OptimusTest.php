@@ -29,6 +29,10 @@ final class OptimusTest extends AbstractTestCase
     public function testFacadeAccessor(): void
     {
         $method = new ReflectionMethod(Optimus::class, 'getFacadeAccessor');
+        // TODO: Remove `setAccessible` call once PHP 8.0 support is dropped (implicit since PHP 8.1).
+        if (PHP_VERSION_ID < 80100) {
+            $method->setAccessible(true);
+        }
 
         $this->assertSame('optimus', $method->invoke(null));
     }
